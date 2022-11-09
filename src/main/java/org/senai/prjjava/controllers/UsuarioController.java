@@ -41,7 +41,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/")
-    public @ResponseBody Iterable atualizar(@RequestBody Usuario objU){
+    public @ResponseBody Usuario atualizar(@RequestBody Usuario objU){
         uRepository.save(objU);
         return objU;
     }
