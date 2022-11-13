@@ -2,7 +2,6 @@ package org.senai.prjjava.controllers;
 
 import java.util.Optional;
 
-
 import org.senai.prjjava.entity.Produto;
 import org.senai.prjjava.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ public class ProdutoController {
     ProdutoRepository pRepository;
 
     @PostMapping("/")
-    public Integer addProduto(@RequestBody Produto objP) {
+    public @ResponseBody Integer addProduto(@RequestBody Produto objP) {
         pRepository.save(objP);
         return objP.getId();
     }
@@ -47,7 +46,7 @@ public class ProdutoController {
     }
 
     @DeleteMapping("/{id}")
-    public String apagar(@PathVariable Integer id) {
+    public @ResponseBody String apagar(@PathVariable Integer id) {
         pRepository.deleteById(id);
         return "Produto Apagado!";
     }

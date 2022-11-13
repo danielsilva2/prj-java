@@ -1,6 +1,5 @@
 package org.senai.prjjava.controllers;
 
-
 import java.util.Optional;
 
 import org.senai.prjjava.entity.Usuario;
