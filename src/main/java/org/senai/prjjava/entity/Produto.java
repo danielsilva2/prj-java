@@ -32,7 +32,7 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public Integer getValor() {
+    public float getValor() {
         return valor;
     }
     public void setValor(float valor) {
